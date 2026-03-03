@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="cursor-glow"></div>
+
+<nav>
+<div class="logo">SmartPark</div>
+<div>
+<button onclick="location.href='slots.html'" class="btn">View Slots</button>
+<button onclick="toggleDarkMode()" class="btn">🌙</button>
+</div>
+</nav>
+
+<section class="glass glow-border">
+<h2>User Dashboard</h2>
+<p>Role: <span id="roleDisplay"></span></p>
+</section>
+
+<script src="js/main.js"></script>
+<script src="js/darkmode.js"></script>
+<script src="js/auth.js"></script>
+
+<script>
+document.getElementById("roleDisplay").innerText = checkRole();
+</script>
+
+</body>
+</html>

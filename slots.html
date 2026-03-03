@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Slots</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/darkmode.css">
+</head>
+<body>
+
+<div class="grid-bg"></div>
+<div class="cursor-glow"></div>
+
+<nav>
+<div class="logo">Parking Slots</div>
+<button onclick="toggleDarkMode()" class="btn">🌙</button>
+</nav>
+
+<section class="glass glow-border">
+<h2>Live Slot Status</h2>
+<div id="slotsContainer" class="slots-grid"></div>
+</section>
+
+<div id="modal" class="modal">
+<div class="modal-content glass glow-border">
+<h3>Reserve Slot</h3>
+<button onclick="confirmReservation()" class="btn-primary">Confirm</button>
+<button onclick="closeModal()" class="btn">Cancel</button>
+</div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/darkmode.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/slots.js"></script>
+
+</body>
+</html>

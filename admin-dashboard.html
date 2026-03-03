@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/darkmode.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="grid-bg"></div>
+<div class="cursor-glow"></div>
+
+<nav>
+    <div class="logo">SmartPark Admin</div>
+    <button onclick="toggleDarkMode()" class="mode-btn">🌙</button>
+</nav>
+
+<section class="glass glow-border">
+    <h2>Parking Analytics</h2>
+    <canvas id="chart"></canvas>
+</section>
+
+<script src="js/main.js"></script>
+<script src="js/darkmode.js"></script>
+
+<script>
+const ctx = document.getElementById('chart');
+new Chart(ctx,{
+type:'doughnut',
+data:{
+labels:["Available","Occupied","Reserved"],
+datasets:[{data:[18,22,10]}]
+}
+});
+</script>
+
+</body>
+</html>
